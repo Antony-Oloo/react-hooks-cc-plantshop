@@ -9,7 +9,7 @@ function PlantPage() {
 
   // Fetch plants from the backend when the component mounts
   useEffect(() => {
-    fetch('http://localhost:6001/plants')
+    fetch('http://my-json-server.typicode.com/Antony-Oloo/react-hooks-cc-plantshop/plants')
       .then((response) => response.json())
       .then((data) => {
         // Add an inStock field to each plant
