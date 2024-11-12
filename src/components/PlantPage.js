@@ -51,7 +51,7 @@ function PlantPage() {
     setFilteredPlants(updatedPlants);
 
     // Send a PATCH request to update the status on the backend
-    fetch(`http://localhost:6001/plants/${id}`, {
+    fetch(`http://my-json-server.typicode.com/Antony-Oloo/react-hooks-cc-plantshop/plants/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ inStock: newInStockStatus }),
