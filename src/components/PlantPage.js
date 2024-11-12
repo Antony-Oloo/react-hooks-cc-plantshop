@@ -9,7 +9,7 @@ function PlantPage() {
 
   // Fetch plants from the backend when the component mounts
   useEffect(() => {
-    fetch('http://my-json-server.typicode.com/Antony-Oloo/react-hooks-cc-plantshop/plants')
+    fetch('https://my-json-server.typicode.com/Antony-Oloo/react-hooks-cc-plantshop/plants')
       .then((response) => response.json())
       .then((data) => {
         // Add an inStock field to each plant
@@ -51,7 +51,7 @@ function PlantPage() {
     setFilteredPlants(updatedPlants);
 
     // Send a PATCH request to update the status on the backend
-    fetch(`http://my-json-server.typicode.com/Antony-Oloo/react-hooks-cc-plantshop/plants/${id}`, {
+    fetch(`https://my-json-server.typicode.com/Antony-Oloo/react-hooks-cc-plantshop/plants/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ inStock: newInStockStatus }),
